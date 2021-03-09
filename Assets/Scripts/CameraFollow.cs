@@ -16,6 +16,11 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
+        CameraMove();
+    }
+
+    void CameraMove()
+    {
         Vector3 newPos;
         newPos.x = followX ? follow.position.x - offset.x : transform.position.x;
         newPos.y = followY ? follow.position.y - offset.y : transform.position.y;

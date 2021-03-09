@@ -21,6 +21,13 @@ public class PlayerScore : MonoBehaviour
     {
         if (canGetScore)
         {
+            ForceToScore();
+        }
+
+    }
+
+    void ForceToScore()
+    {
             float forceBeingApplied = 0;
             foreach (Joint joint in joints)
             {
@@ -32,7 +39,6 @@ public class PlayerScore : MonoBehaviour
                 currentScore += forceBeingApplied;
                 scoreText.text = "Score: " + Mathf.RoundToInt(currentScore).ToString();
             }
-        }
 
     }
 
